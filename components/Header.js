@@ -18,22 +18,22 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const solutions = [
   {
-    name: 'Analytics',
+    name: 'Contact',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    href: '/contact',
     icon: ChartBarIcon,
   },
   {
-    name: 'Engagement',
+    name: 'Home',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    href: '/',
     icon: CursorClickIcon,
   },
   { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
   {
-    name: 'Integrations',
+    name: 'Grid',
     description: "Connect with third-party tools that you're already using.",
-    href: '#',
+    href: '/grid',
     icon: ViewGridIcon,
   },
   {

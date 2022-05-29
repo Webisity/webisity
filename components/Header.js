@@ -29,7 +29,7 @@ const solutions = [
     href: '/',
     icon: CursorClickIcon,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
+  { name: 'FAQ', description: "Your customers' data will be safe and secure.", href: '/faq', icon: ShieldCheckIcon },
   {
     name: 'Grid',
     description: "Connect with third-party tools that you're already using.",
@@ -37,9 +37,9 @@ const solutions = [
     icon: ViewGridIcon,
   },
   {
-    name: 'Automations',
+    name: 'Pricing',
     description: 'Build strategic funnels that will drive your customers to convert',
-    href: '#',
+    href: '/pricing',
     icon: RefreshIcon,
   },
 ]
@@ -66,7 +66,12 @@ const resources = [
     href: '#',
     icon: CalendarIcon,
   },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
+  {
+    name: 'FAQ',
+  description: 'Understand how we take your privacy seriously.',
+  href: '/FAQ',
+  icon: ShieldCheckIcon,
+},
 ]
 const recentPosts = [
   { id: 1, name: 'Boost your conversion rate', href: '#' },
@@ -86,7 +91,7 @@ export default function Header() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
-              <img className="h-8 w-auto sm:h-10" src="/logo.svg" alt="Company name" />
+              <img className="h-8 w-auto sm:h-10" src="/header logo.svg" alt="Company name" />
               
             </a>
           </div>

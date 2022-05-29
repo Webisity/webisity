@@ -1,3 +1,4 @@
+import Emoji from './Emoji'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const navigation = {
@@ -92,11 +93,11 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="bg-white mt-8 border-t border-gray-200" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="max-w-7xl mx-auto py-12 px-2 sm:px-6 lg:py-16 lg:px-8">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             
@@ -202,16 +203,19 @@ export default function Footer() {
           </form>
         </div>
         <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 md:order-2">
+          {/* <div className="bg-blue-200 flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
               <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
-          </div>
-          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+          </div> */}
+           <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
             &copy; 2022 Webisity.com
+          </p>
+          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-2">
+            Built with <Emoji symbol="❤️" label="love"/> by Webisity
           </p>
         </div>
       </div>

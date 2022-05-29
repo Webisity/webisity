@@ -1,12 +1,18 @@
 import Head from 'next/head'
+import Header from './Header'
+import Footer from './Footer'
 
-export default function Layout({ children }) {
+export default function zztop({ children }) {
   return (
     <>
       <Head>
         <title>Layouts Example</title>
       </Head>
-      <main>{children}</main>
+      <main>
+        <Header/>
+        {children}
+        <Footer />
+        </main>
     </>
   )
 }

@@ -1,6 +1,3 @@
-import Layout from '../components/layout'
-import Header from '../components/Header'
-
 export default function Contact() {
   return (
     <section>
@@ -29,14 +26,5 @@ export default function Contact() {
         state is persisted.
       </p>
     </section>
-  )
-}
-
-Contact.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <Header/>
-      {page}
-    </Layout>
   )
 }

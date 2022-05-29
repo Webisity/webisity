@@ -1,7 +1,3 @@
-import Layout from '../components/layout'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-
 const files = [
     {
       title: 'IMG_4985.HEIC',
@@ -72,16 +68,5 @@ const files = [
       </ul>
     
 </div>
-    )
-  }
-
-  Grid.getLayout = function getLayout(page) {
-    return (
-      <Layout>
-        <Header/>
-        {page}
-        <Footer/>
-      </Layout>
-
     )
   }

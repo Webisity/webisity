@@ -6,7 +6,7 @@ const pricing = {
       title: 'Starter Site',
       price: 299,
       frequency: '/month',
-      description: 'The essentials to provide your best work for clients.',
+      description: 'All the essentials to provide your best work for clients.',
       features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', 'Hosting and support for 1 year'],
       cta: 'Monthly billing',
       mostPopular: false,

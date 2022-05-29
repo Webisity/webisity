@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 
-export default function zztop({ children }) {
+export default function Layout({ children }) {
   return (
     <>
       <Head>

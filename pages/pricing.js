@@ -1,3 +1,4 @@
+import Features from '../components/Features'
 import { CheckIcon } from '@heroicons/react/outline'
 
 const pricing = {
@@ -51,6 +52,7 @@ function classNames(...classes) {
 
 export default function Pricing() {
   return (
+    <>
     <div className="max-w-7xl mx-auto py-24 px-4 bg-white sm:px-6 lg:px-8">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
         Pricing plans for teams of all sizes
@@ -106,5 +108,7 @@ export default function Pricing() {
         ))}
       </div>
     </div>
+    <Features />
+    </>
   )
 }

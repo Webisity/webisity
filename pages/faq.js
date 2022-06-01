@@ -7,7 +7,7 @@ const faqs = [
     // More questions...
   ]
   
-  export default function FAQ() {
+ const FAQ = () => {
     return (
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
@@ -37,3 +37,5 @@ const faqs = [
       </div>
     )
   }
+
+  export default FAQ

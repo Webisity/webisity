@@ -2,6 +2,8 @@
 // import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import ContactForm from "../components/contact-form";
+
 
 export default function Index() {
   return (
@@ -12,10 +14,11 @@ export default function Index() {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
+        <h1 className="pb-2 text-transparent bg-clip-text bg-gradient-to-r from-migreen to-miblue
+ text-6xl font-bold">
+          Bespoke Website Design{' '}
           <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
+            
           </a>
         </h1>
 
@@ -67,6 +70,7 @@ export default function Index() {
             </p>
           </a>
         </div>
+        {/* <ContactForm /> */}
       </main>
 
       {/* <footer className="flex h-24 w-full items-center justify-center border-t">

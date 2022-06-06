@@ -55,7 +55,7 @@ const resources = [
     icon: SupportIcon,
   },
   {
-    name: 'Guides',
+    name: 'ZZGuides',
     description: 'Learn how to maximize our platform to get the most out of it.',
     href: '#',
     icon: BookmarkAltIcon,
@@ -167,11 +167,11 @@ export default function Header() {
               )}
             </Popover>
 
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/pricing" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Pricing
             </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Docs
+            <a href="/contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Contact
             </a>
 
             <Popover className="relative">
@@ -183,7 +183,7 @@ export default function Header() {
                       'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     )}
                   >
-                    <span>More</span>
+                    <span>AMore</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',

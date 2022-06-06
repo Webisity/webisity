@@ -1,12 +1,11 @@
 // import Layout from '../components/Layout'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-const Layout = ({ children }) => 
-<div className="layout">
-  <Header />
-  {children}
-  <Footer />
-  </div>
+import Layout from '../components/Layout'
+// const Layout = ({ children }) => 
+// <div className="layout">
+//   <Header />
+//   {children}
+//   <Footer />
+//   </div>
 
 import '../styles/globals.css'
 

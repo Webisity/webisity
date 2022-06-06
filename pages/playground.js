@@ -1,9 +1,9 @@
 import Playground from "../components/Playground";
 
-const Play = () => {
+const Playground = () => {
     return (
         <Playground />
     )
 }
 
-export default Play
+export default Playground

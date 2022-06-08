@@ -1,60 +1,76 @@
+import clsx from 'clsx'
+
 const people = [
-    {
-      name: 'Responsive',
-      role: 'We will build you a beautiful, mobile friendly website that is designed to look great on every screen.',
-      imageUrl:
-        'https://LorellaPalmerLTD.b-cdn.net/responsive%201600.jpg',
-      twitterUrl: '#',
-      linkedinUrl: '#',
-    },
-    {
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
-        imageUrl:
-          'https://LorellaPalmerLTD.b-cdn.net/responsive%201600.png',
-        twitterUrl: '#',
-        linkedinUrl: '#',
-      },{
-        name: 'Lindsay Walton',
-        role: 'Front-end Developer',
-        imageUrl:
-          'https://LorellaPalmerLTD.b-cdn.net/responsive%201600.jpg',
-        twitterUrl: '#',
-        linkedinUrl: '#',
-      },
-  ]
+  {
+    name: 'Responsive',
+    role: 'We will build you a beautiful, mobile friendly website that is designed to look great on every screen.',
+    imageUrl: 'https://LorellaPalmerLTD.b-cdn.net/responsive%201600.png',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'Lindsay Walton',
+    role: 'Front-end Developer',
+    imageUrl: 'https://LorellaPalmerLTD.b-cdn.net/responsive%201600.png',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    name: 'Lindsay Walton',
+    role: 'Front-end Developer',
+    imageUrl: 'https://LorellaPalmerLTD.b-cdn.net/responsive%201600.png',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+]
+
+const checklist = [
+  'Unlimited projects',
+  'No per user fees',
+  'Unlimited storage',
+  '24/7 support',
+  'Cancel any time',
+  '14 days free',
+]
 
 export default function Tabbed() {
+  const myOrder = 'order-2'
   return (
-      <>
-      /* Three column section
-      <div className="bg-blue-100">
-      <div className="bg-pink-200 mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-        <div className="bg-slate-400 space-y-12">
-          <div className="bg-blue-800 space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Team</h2>
-            <p className="text-xl text-gray-500 wiggle">
-              Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor ultricies donec risus sodales. Tempus
-              quis et.
-            </p>
-          </div>
-          <ul
-            role="list"
-            className="bg-green-200 space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-16"
-          >
-            {people.map((person) => (
-              <li key={person.name}>
-                <div className="bg-blue-800 space-y-4">
-                  <div className="aspect-w-1 aspect-h-1">
-                    <img className="object-cover" src={person.imageUrl} alt="" width={200} height={200}/>
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="text-lg leading-6 font-medium space-y-1">
-                      <h3 className="text-center">{person.name}</h3>
-                      <p className="text-indigo-600 text-center">{person.role}</p>
+    <>
+      <div className="bg-gradient-to-b from-white to-green-400">
+        <div className="mx-auto max-w-6xl bg-slate-400 py-6 px-4 sm:px-6 lg:px-8 lg:py-24">
+          <div className="space-y-12 bg-pink-100">
+            <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+              <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Why Webisity?
+              </h2>
+              <p className="mx-auto max-w-3xl text-center text-xl text-gray-500">
+                Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum
+                dolor ultricies donec risus sodales. Tempus quis et. Odio nisi,
+                lectus dis nulla. Ultrices maecenas vitae rutrum dolor ultricies
+                donec risus sodales. Tempus quis et.
+              </p>
+            </div>
+            <ul className="space-y-12 bg-slate-200 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-24">
+              {people.map((person) => (
+                <li key={person.name}>
+                  <div className="space-y-4">
+                    <div className="aspect-w-1 aspect-h-1 relative">
+                      <img
+                        className="absolute inset-0 h-full w-full object-cover"
+                        src={person.imageUrl}
+                        alt=""
+                      />
                     </div>
-                    {/* <ul role="list" className="flex space-x-5"> */}
+
+                    <div className="space-y-2">
+                      <div className="space-y-1 text-lg font-medium leading-6">
+                        <h3 className="text-center">{person.name}</h3>
+                        <p className="text-center text-pink-600">
+                          {person.role}
+                        </p>
+                      </div>
+                      {/* <ul role="list" className="flex space-x-5"> */}
                       {/* <li>
                         <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
                           <span className="sr-only">Twitter</span>
@@ -75,20 +91,180 @@ export default function Tabbed() {
                           </svg>
                         </a>
                       </li> */}
-                    {/* </ul> */}
+                      {/* </ul> */}
+                    </div>
                   </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-      {/* <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 80">
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 80">
     <path stroke-width="0.5" stroke="#f00" fill="#00f" d="M95 5 Q70 20 70 38 T50 65 Q55 50 30 40 T5 5z"/>
 </svg> */}
-    </div>
-    
-  
+      </div>
+      <div className="mx-auto max-w-6xl border-t-8 border-indigo-400 bg-slate-400 py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl space-y-4  sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-2 lg:gap-x-12">
+          <div className="aspect-w-3 aspect-h-2 order-2">
+            <img
+              className="absolute inset-0 z-0 h-full w-full object-cover"
+              src="no love.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="bg-pink-200 lg:flex lg:items-center">
+            <div className="bg-blue-400 px-4">
+              <h1>Wireframe outlining.</h1>
+              <h2>
+                Proper planning before the production stage is crucial for a
+                successful website. We will build a wireframe outline, allowing
+                you to see a clear picture of the flow and feel of your site.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto -mt-24 -mb-24 hidden max-w-4xl bg-pink-100 md:block">
+        <img className="" src="dotted.svg" alt="" />
+      </div>
+      <div className="bg-slate-400">
+        <div className=" mx-auto max-w-7xl space-y-12 bg-blue-100 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 md:grid lg:grid-cols-2 lg:gap-x-12">
+          <div className="aspect-w-3 aspect-h-2  bg-pink-200">
+            <img
+              className="absolute inset-0 h-full w-full object-cover"
+              src="no love.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className=" lg:flex lg:items-center">
+            <div className="bg-blue-400 px-4">
+              <h1>Two Wireframe outlining.</h1>
+              <h2>
+                Proper planning before the production stage is crucial for a
+                successful website. We will build a wireframe outline, allowing
+                you to see a clear picture of the flow and feel of your site.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-slate-800">
+        <div className="mx-auto max-w-6xl grid-cols-4 gap-0 bg-green-200 md:grid">
+          <div className="grid place-items-center lg:col-span-2">
+            <div className="mx-8 bg-blue-200 text-center">
+              <h1>Ready To Start?</h1>
+              <h1 className="mt-4">
+                Our talented designers are here, waiting to hear from you, so
+                they can get started on creating your perfect site. Get in touch
+                with us today, and we’ll take care of everything for you!
+              </h1>
+            </div>
+          </div>
+          <div className="bg-pink-200 py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+            <h3 className="text-lg font-medium text-gray-900">
+              Send us a message
+            </h3>
+            <form
+              // onSubmit={handleSubmit}
+              action="#"
+              method="POST"
+              className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+            >
+              <div className="col-span-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-900"
+                >
+                  First name
+                </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    autoComplete="given-name"
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-900"
+                >
+                  aEmail
+                </label>
+                <div className="mt-1">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-900"
+                  >
+                    Phone
+                  </label>
+                  <span id="phone-optional" className="text-sm text-gray-500">
+                    Optional
+                  </span>
+                </div>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    autoComplete="tel"
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    aria-describedby="phone-optional"
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <div className="flex justify-between">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-900"
+                  >
+                    Message
+                  </label>
+                  <span id="message-max" className="text-sm text-gray-500">
+                    Max. 500 characters
+                  </span>
+                </div>
+                <div className="mt-1">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="block w-full rounded-md border border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    aria-describedby="message-max"
+                    defaultValue={''}
+                  />
+                </div>
+              </div>
+              <div className="sm:col-span-2 sm:flex sm:justify-end">
+                <button
+                  type="submit"
+                  className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 "
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

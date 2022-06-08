@@ -99,7 +99,7 @@ export default function Pricing() {
                 tier.mostPopular
                   ? 'bg-indigo-500 text-white hover:bg-indigo-600'
                   : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100',
-                'mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium'
+                'mt-8 block w-full py-3 px-6 border border-transparent rounded-lg text-center font-medium'
               )}
             >
               {tier.cta}

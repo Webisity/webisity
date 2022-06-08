@@ -15,7 +15,7 @@ export default function Index() {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="pb-2 text-transparent bg-clip-text bg-gradient-to-r from-migreen to-miblue
+        <h1 className="pb-2 text-transparent bg-clip-text bg-gradient-to-r from-pearl-aqua to-palatinate-blue
  text-6xl font-bold">
           Bespoke Website Design{' '}
           <a className="text-blue-600" href="https://nextjs.org">
@@ -23,7 +23,7 @@ export default function Index() {
           </a>
         </h1>
 
-        <p className="mt-3 text-2xl">
+        <p className="text-jet mt-3 text-2xl">
           Get started by editing{' '}
           <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
             pages/index.tsx

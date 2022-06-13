@@ -16,6 +16,8 @@ import {
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
+import { useWindowScrollPositions } from './useWindowScrollPositions'
+
 const solutions = [
   {
     name: 'Contact',
@@ -98,27 +100,35 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  const { scrollX, scrollY } = useWindowScrollPositions()
   return (
-    <Popover className="relative bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-          <div className="desktop:w-0 desktop:flex-1 flex justify-start">
+    <Popover
+      className={`sticky top-0 z-50 bg-white/[.96] ${
+        scrollY > 10 ? 'shadow-md' : ''
+      } duration-600 transition`}
+    >
+      <div className="hidden">
+        Scroll position is ({scrollX}, {scrollY})
+      </div>
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="flex items-center justify-between border-gray-100 py-6 tablet:justify-start tablet:space-x-10">
+          <div className="flex justify-start desktop:w-0 desktop:flex-1">
             <a href="/">
               <span className="sr-only">Workflow</span>
               <img
-                className="h-8 w-auto sm:h-10"
+                className="sm:h-10 h-8 w-auto"
                 src="/header logo.svg"
                 alt="Company name"
               />
             </a>
           </div>
-          <div className="-my-2 -mr-2 md:hidden">
+          <div className="-my-2 -mr-2 tablet:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+          <Popover.Group as="nav" className="hidden space-x-10 tablet:flex">
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -147,9 +157,9 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="desktop:left-1/2 desktop:ml-0 desktop:-translate-x-1/2 absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0">
+                    <Popover.Panel className="sm:px-0 absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 desktop:left-1/2 desktop:ml-0 desktop:-translate-x-1/2">
                       <div className="rounded-desktop shadow-desktop overflow-hidden ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        <div className="sm:gap-8 sm:p-8 relative grid gap-6 bg-white px-5 py-6">
                           {solutions.map((item) => (
                             <a
                               key={item.name}
@@ -171,7 +181,7 @@ export default function Header() {
                             </a>
                           ))}
                         </div>
-                        <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                        <div className="sm:flex sm:space-y-0 sm:space-x-10 sm:px-8 space-y-6 bg-gray-50 px-5 py-5">
                           {callsToAction.map((item) => (
                             <div key={item.name} className="flow-root">
                               <a
@@ -235,9 +245,9 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+                    <Popover.Panel className="sm:px-0 absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2">
                       <div className="rounded-desktop shadow-desktop overflow-hidden ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        <div className="sm:gap-8 sm:p-8 relative grid gap-6 bg-white px-5 py-6">
                           {resources.map((item) => (
                             <a
                               key={item.name}
@@ -259,7 +269,7 @@ export default function Header() {
                             </a>
                           ))}
                         </div>
-                        <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
+                        <div className="sm:px-8 sm:py-8 bg-gray-50 px-5 py-5">
                           <div>
                             <h3 className="text-sm font-medium uppercase tracking-wide text-gray-500">
                               Recent Posts
@@ -298,7 +308,7 @@ export default function Header() {
               )}
             </Popover>
           </Popover.Group>
-          <div className="desktop:w-0 hidden items-center justify-end md:flex md:flex-1">
+          <div className="hidden items-center justify-end tablet:flex tablet:flex-1 desktop:w-0">
             <a
               href="#"
               className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
@@ -326,7 +336,7 @@ export default function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition tablet:hidden"
         >
           <div className="rounded-desktop shadow-desktop divide-y-2 divide-gray-50 bg-white ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">

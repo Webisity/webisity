@@ -49,22 +49,22 @@ const features = [
 export default function Features() {
   return (
     <>
-      <div className="lg:text-center">
+      <div className="tablet:text-center">
         <h2 className="text-base font-semibold uppercase tracking-wide text-indigo-600">
           All Inclusive
         </h2>
-        <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+        <p className="sm:text-4xl mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900">
           Included in all our plans.
         </p>
-        <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+        <p className="mt-4 max-w-2xl text-xl text-gray-500 tablet:mx-auto">
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
           voluptatum cupiditate veritatis in accusamus quisquam.
         </p>
       </div>
       <div className="bg-white py-12">
-        <div className="mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="sm:px-6 mx-auto max-w-xl px-4 tablet:max-w-7xl tablet:px-8">
           <h2 className="sr-only">A better way to send money.</h2>
-          <dl className="space-y-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+          <dl className="space-y-10 tablet:grid tablet:grid-cols-3 tablet:gap-8 tablet:space-y-0">
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt>

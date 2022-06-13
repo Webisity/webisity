@@ -10,15 +10,15 @@ export default function Contact() {
   }
   return (
     <div className="bg-gray-100">
-      <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div className="sm:py-24 sm:px-6 mx-auto max-w-7xl py-16 px-4 tablet:px-8">
         <div className="relative rounded-2xl bg-white shadow-xl">
           <h2 className="sr-only">Contact us</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3">
+          <div className="grid grid-cols-1 tablet:grid-cols-3">
             {/* Contact information */}
-            <div className="relative overflow-hidden rounded-l-2xl bg-green-400 py-10 px-6 sm:px-10 xl:p-12">
+            <div className="sm:px-10 relative overflow-hidden rounded-l-2xl bg-green-400 py-10 px-6 desktop:p-12">
               <div
-                className="pointer-events-none absolute inset-0 sm:hidden"
+                className="sm:hidden pointer-events-none absolute inset-0"
                 aria-hidden="true"
               >
                 <svg
@@ -51,7 +51,7 @@ export default function Contact() {
                 </svg>
               </div>
               <div
-                className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 sm:block lg:hidden"
+                className="sm:block pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 tablet:hidden"
                 aria-hidden="true"
               >
                 <svg
@@ -84,7 +84,7 @@ export default function Contact() {
                 </svg>
               </div>
               <div
-                className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 lg:block"
+                className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 tablet:block"
                 aria-hidden="true"
               >
                 <svg
@@ -207,7 +207,7 @@ export default function Contact() {
             </div>
 
             {/* Contact form */}
-            <div className="bg-pink-200 py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+            <div className="sm:px-10 bg-pink-200 py-10 px-6 tablet:col-span-2 desktop:p-12">
               <h3 className="text-lg font-medium text-gray-900">
                 Send us a message
               </h3>
@@ -215,7 +215,7 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 action="#"
                 method="POST"
-                className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                className="sm:grid-cols-2 sm:gap-x-8 mt-6 grid grid-cols-1 gap-y-6"
               >
                 <div>
                   <label
@@ -333,7 +333,7 @@ export default function Contact() {
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
-                    className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
+                    className="sm:w-auto mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
                     Submit
                   </button>

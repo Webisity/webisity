@@ -9,10 +9,10 @@ export default function Layout({ children }) {
         <title>Layouts Example</title>
       </Head>
       <main>
-        <Header/>
+        <Header />
         {children}
         <Footer />
-        </main>
+      </main>
     </>
   )
 }
